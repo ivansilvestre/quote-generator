@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap");
 
 html {
   box-sizing: border-box;
@@ -19,6 +19,7 @@ body {
 }
 
 .quote-container {
+  display: none;
   width: auto;
   max-width: 900px;
   padding: 20px 30px;
@@ -41,7 +42,7 @@ body {
 
 .quote-author {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 15px;
   font-size: 1.5rem;
   font-style: italic;
@@ -50,7 +51,7 @@ body {
 .button-container {
   margin-top: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 button {
@@ -73,6 +74,25 @@ button:hover {
 button:active {
   transform: translate(0, 0.3rem);
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+#loader {
+  display: inherit;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #333;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 1000px) {
